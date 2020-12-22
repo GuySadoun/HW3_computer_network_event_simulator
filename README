@@ -1,0 +1,24 @@
+Simulator for poisson arrival people to vaccinate with lambda with M different vaccines and service time is poisson with mu.
+rules:
+- if no one is vaccinated - pick one vaccine uniformly from M vaccines
+- if there is allready someone inside getting vaccine, the arrived customer will take same vaccine
+- if there is some people inside in q, they neccerely take the same vaccine and the arrived customer will take same vaccine as well
+
+input:
+T - time units limit 
+M - num of different vaccines
+lambda - rate of customer arrival
+mu - rate of service time (time t give the vaccine)
+P0,...,Pn - probabbilty for new customer to stay while there is i customers in queue (n is not limited) *(neccerily P0 = 1 , Pn = 0)
+
+output:
+Y - num of customer served
+X - num of customer left because of line
+T' - time last vaccine given 
+T_0 - time there was no people in hospital
+T_i - avg time for all queues (for each vaccine) there was i people in queue
+Z_0 - probabbilty for 0 people want to vaccinate
+Z_i - probabbilty for i people want to vaccinate
+T_w - avg wait time for customer
+T_s - avg service time
+mean_kambda - avg rate of customer arrival
